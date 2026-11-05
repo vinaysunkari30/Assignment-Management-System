@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 import Login from "../pages/Login";
 import StudentDashboard from "../pages/student/StudentDashboard";
@@ -18,11 +18,10 @@ const AppRoutes = () => {
   return (
     <>
       <Routes>
-
+        <Route path="/" element={<Navigate to="/login" replace />} />
         <Route element={<PublicRoute />}>
           <Route path="/login" element={<Login />} />
         </Route>
-
         <Route element={<ProtectedRoute role="admin" />}>
           <Route path="/admin" element={<Layout />}>
             <Route path="dashboard" element={<AdminDashboard />} />
@@ -31,7 +30,6 @@ const AppRoutes = () => {
             <Route path="progress" element={<Progress />} />
           </Route>
         </Route>
-
         <Route element={<ProtectedRoute role="student" />}>
           <Route path="/student" element={<Layout />}>
             <Route path="dashboard" element={<StudentDashboard />} />
@@ -40,7 +38,6 @@ const AppRoutes = () => {
             <Route path="submitted" element={<Submitted />} />
           </Route>
         </Route>
-
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
