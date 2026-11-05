@@ -176,11 +176,11 @@ Admins can manage only the assignments they created, while students can access o
 
 The application was deployed using Vercel.
 
-**Live Demo:**
+**Live Demo:** - https://vinay-assignment-management-system.vercel.app
 
 ## Author
 
 **Vinay Sunkari**
 
-Full Stack Developer
+Full Stack/MERN Stack Developer
 
