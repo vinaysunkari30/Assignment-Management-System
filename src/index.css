@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --font-syne: "Syne", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+  --font-inter: "Inter", sans-serif;
+
+  /* BREAKPOINTS */
+  --breakpoint-xs: 480px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  /* COLORS */
+  --color-navy-950: #030712;
+  --color-navy-900: #0a0f2c;
+  --color-navy-800: #0f1742;
+  --color-navy-700: #162155;
+  --color-blue-electric: #2563eb;
+  --color-blue-bright: #3b82f6;
+  --color-blue-glow: #60a5fa;
+  --color-gold: #f59e0b;
+  --color-gold-light: #fbbf24;
+  --color-emerald: #10b981;
+  --color-rose: #f43f5e;
+}
+
+.scroll{
+  scrollbar-width: none;
+}
+
+.shake-hand {
+  animation: handShake 4s ease-in-out infinite;
+  transform-origin: 70% 70%;
+}
+
+@keyframes handShake {
+  0%,
+  28%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  4% {
+    transform: rotate(20deg);
+  }
+
+  8% {
+    transform: rotate(-18deg);
+  }
+
+  12% {
+    transform: rotate(15deg);
+  }
+
+  16% {
+    transform: rotate(-12deg);
+  }
+
+  20% {
+    transform: rotate(10deg);
+  }
+
+  24% {
+    transform: rotate(-8deg);
+  }
+
+  28% {
+    transform: rotate(5deg);
+  }
+
+  32% {
+    transform: rotate(0deg);
+  }
+}
